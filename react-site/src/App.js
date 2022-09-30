@@ -3,6 +3,9 @@ import './App.css';
 import Button from './Button';
 import { useState } from 'react';
 
+import Image from './Image';
+import image from "./assets/images/jezerocrater.jpeg"
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -26,6 +29,10 @@ function App() {
         <div class="buttons">
           <Button title={"-"} action={decrementCount} />
           <Button title={"+"} action={incrementCount} />
+        </div>
+        <div class="image">
+          <Image url={image} text={"this is some text"}/>
+          <Image url={image} text={"even more text"}/>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-// components/Button.js
+// Button.js
 
 import React from "react";
 

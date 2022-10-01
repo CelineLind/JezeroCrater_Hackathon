@@ -4,6 +4,10 @@ import { useState } from 'react';
 
 import Image from './Image';
 import jezerocrater from "./assets/images/jezerocrater.jpeg"
+import one from './assets/images/one.jpeg'
+import two from './assets/images/two.jpeg'
+import three from './assets/images/three.jpeg'
+import four from './assets/images/four.jpeg'
 
 function App() {
 
@@ -18,19 +22,19 @@ function App() {
   }
   let updateImage1 = () => {
     setImagenum(1);
-    setURL(jezerocrater)
+    setURL(one)
   }
   let updateImage2 = () => {
     setImagenum(2);
-    setURL(jezerocrater)
+    setURL(two)
   }
   let updateImage3 = () => {
     setImagenum(3);
-    setURL(jezerocrater)
+    setURL(three)
   }
   let updateImage4 = () => {
     setImagenum(4);
-    setURL(jezerocrater)
+    setURL(four)
   }
 
   return (

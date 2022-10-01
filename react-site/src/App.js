@@ -3,11 +3,11 @@ import Button from './Button';
 import { useState } from 'react';
 
 import Image from './Image';
-import jezerocrater from "./assets/images/jezerocrater.jpeg"
-import one from './assets/images/one.jpeg'
-import two from './assets/images/two.jpeg'
-import three from './assets/images/three.jpeg'
-import four from './assets/images/four.jpeg'
+import jezerocrater from "./assets/images/crater.jpg"
+import seitah from './assets/images/seitah.jpg'
+import delta from './assets/images/delta.jpg'
+import maaz from './assets/images/maaz.jpg'
+import four from './assets/images/crater.jpg'
 
 function App() {
 
@@ -22,15 +22,15 @@ function App() {
   }
   let updateImage1 = () => {
     setImagenum(1);
-    setURL(one)
+    setURL(seitah)
   }
   let updateImage2 = () => {
     setImagenum(2);
-    setURL(two)
+    setURL(delta)
   }
   let updateImage3 = () => {
     setImagenum(3);
-    setURL(three)
+    setURL(maaz)
   }
   let updateImage4 = () => {
     setImagenum(4);
@@ -39,18 +39,17 @@ function App() {
 
   let incrementImage = () => {
     if ((ImageNum + 1) < 5){
-      setImagenum(ImageNum + 1);
-      if ((ImageNum + 1) == 1){
-        setURL(one)
+      if ((ImageNum + 1) === 1){
+        updateImage1()
       }
-      else if ((ImageNum + 1) == 2){
-        setURL(two)
+      else if ((ImageNum + 1) === 2){
+        updateImage2()
       }
-      else if ((ImageNum + 1) == 3){
-        setURL(three)
+      else if ((ImageNum + 1) === 3){
+        updateImage3()
       }
-      else if ((ImageNum + 1) == 4){
-        setURL(four)
+      else if ((ImageNum + 1) === 4){
+        updateImage4()
       }
     } // when it reaches 4, that is the end
   }

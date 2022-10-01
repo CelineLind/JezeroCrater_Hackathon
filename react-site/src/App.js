@@ -1,6 +1,7 @@
 import './App.css';
 import Button from './Button';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Howl } from "howler";
 
 import Image from './Image';
 import jezerocrater from "./assets/images/crater.jpg"
@@ -9,8 +10,44 @@ import delta from './assets/images/delta.jpg'
 import maaz from './assets/images/maaz.jpg'
 import four from './assets/images/crater.jpg'
 
+import loadingMusic from './assets/music/loading.mp3'
+import craterMuisc from './assets/music/crater.mp3'
+import riverMusic from './assets/music/river.mp3'
+import lavaMusic from './assets/music/lava.mp3'
+
+// sound related
+const loading = new Howl({
+  src: [loadingMusic],
+  html5: true,
+  loop: true,
+});
+const crater = new Howl({
+  src: [craterMuisc],
+  html5: true,
+  loop: true,
+});
+const river = new Howl({
+  src: [riverMusic],
+  html5: true,
+  loop: true,
+});
+const lava = new Howl({
+  src: [lavaMusic],
+  html5: true,
+  loop: true,
+});
+
+let stopAll = () => {
+  loading.stop();
+  crater.stop();
+  river.stop();
+  lava.stop();
+}
+
+
 function App() {
 
+  // image related
   const [ImageNum, setImagenum] = useState(0);
   const [URL, setURL] = useState(jezerocrater);
   const [alttext, setAlttext] = useState('image of jezero crater');
@@ -37,6 +74,8 @@ function App() {
         </p>
       </div>
     )
+    stopAll();
+    loading.play();
   }
   let updateImage1 = () => {
     setImagenum(1);
@@ -52,6 +91,8 @@ function App() {
         </p>
       </div>
     )
+    stopAll();
+    crater.play();
   }
   let updateImage2 = () => {
     setImagenum(2);
@@ -67,6 +108,8 @@ function App() {
         </p>
       </div>
     )
+    stopAll();
+    river.play();
   }
   let updateImage3 = () => {
     setImagenum(3);
@@ -81,6 +124,8 @@ function App() {
         </p>
       </div>
     )
+    stopAll();
+    lava.play();
   }
   let updateImage4 = () => {
     setImagenum(4);
@@ -96,6 +141,8 @@ function App() {
         </p>
       </div>
     )
+    stopAll();
+    loading.play();
   }
 
   let incrementImage = () => {

@@ -37,6 +37,24 @@ function App() {
     setURL(four)
   }
 
+  let incrementImage = () => {
+    if ((ImageNum + 1) < 5){
+      setImagenum(ImageNum + 1);
+      if ((ImageNum + 1) == 1){
+        setURL(one)
+      }
+      else if ((ImageNum + 1) == 2){
+        setURL(two)
+      }
+      else if ((ImageNum + 1) == 3){
+        setURL(three)
+      }
+      else if ((ImageNum + 1) == 4){
+        setURL(four)
+      }
+    } // when it reaches 4, that is the end
+  }
+
   return (
     <div className="App">
       <div>
@@ -52,7 +70,7 @@ function App() {
             <Button title={'4'} action={updateImage4} />
           </div>
           <div className='image'>
-            <Image url={URL} alttext={alttext}/>
+            <Image url={URL} alttext={alttext} action={incrementImage}/>
           </div>
         </div>
       </div>

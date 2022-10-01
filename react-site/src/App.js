@@ -14,7 +14,15 @@ function App() {
   const [ImageNum, setImagenum] = useState(0);
   const [URL, setURL] = useState(jezerocrater);
   const [alttext, setAlttext] = useState('image of jezero crater');
-  const [Information, setInfo] = useState(<></>);
+  const [Information, setInfo] = useState(
+    <div className='Jezero'>
+        <h1>Jezero Crater</h1>
+        <h2>Welcome to Jezero Crater, home of the Perseverance rover.</h2>
+        <p>
+          This crater contains all sorts of cool rocks. Some rocks formed underwater, while others formed from volcanic activity.
+        </p>
+      </div>
+  );
 
   let updateImage0 = () => {
     setImagenum(0);
@@ -39,7 +47,7 @@ function App() {
         <h1>Seitah</h1>
         <h2>This is the Seitah unit. It is the oldest rock in Jezero Crater.</h2>
         <p>
-          When an impact created Jezero Crater, scientists believe magma was waiting underneath the surface. 
+          When an impact created Jezero Crater, <br/> scientists believe magma was waiting underneath the surface. <br/>  
           The impact exposed the magma, and it spread across the crater.
         </p>
       </div>
@@ -52,7 +60,7 @@ function App() {
     setInfo(
       <div className='Delta'>
         <h1>River Delta</h1>
-        <h2>This is the River Delta. It was formed by water.</h2>
+        <h2>This is the River Delta. <br/> It was formed by water.</h2>
         <p>
           The water carried small pieces of rock from up the river and brought it to Jezero Crater. 
           The crater soon filled with water and became a lake.
@@ -111,9 +119,6 @@ function App() {
     <div className="App">
       <div>
         <div className='Main'>
-          <div className='current'>
-            <h1>{ImageNum}</h1>
-          </div>
           <div className='buttons'>
             <Button title={'0'} action={updateImage0} />
             <Button title={'1'} action={updateImage1} />

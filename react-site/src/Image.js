@@ -2,11 +2,9 @@
 import React from "react";
 
 export default function Image(props) {
-    let { url, text } = props;
+    let { url, alttext } = props;
     return (
-      <div style={{ backgroundImage:`url(${url})`, height:200 }}>
-        {text}
-      </div>
+        <img src={url} alt={alttext} width="100%" height="auto"/>
     );
   }
   

@@ -222,11 +222,11 @@ function App() {
         <div className='Main'>
           <div className='buttons'>
             <div className='nav-buttons'>
-              <Button title={'0'} action={updateImage0} />
-              <Button title={'1'} action={updateImage1} />
-              <Button title={'2'} action={updateImage2} />
-              <Button title={'3'} action={updateImage3} />
-              <Button title={'4'} action={updateImage4} />
+              <Button title={'Jezero Crater'} action={updateImage0} />
+              <Button title={'Seitah'} action={updateImage1} />
+              <Button title={'Delta'} action={updateImage2} />
+              <Button title={'Maaz'} action={updateImage3} />
+              <Button title={'Perseverance'} action={updateImage4} />
             </div>
             <div className='toggle-buttons'>
               <Button title={soundStatus} action={soundOnOff} />
@@ -235,7 +235,7 @@ function App() {
           </div>
           <div className='image'>
             <Image url={URL} alttext={alttext} action={incrementImage} information={Information}/>
-            <p>{caption}</p>
+            <p className='caption'>{caption}</p>
           </div>
         </div>
       </div>

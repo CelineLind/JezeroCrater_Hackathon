@@ -69,10 +69,10 @@ function App() {
   const [muted, setMuted] = useState(false);
   const [soundStatus, setSoundStatus] = useState('Sound is On')
 
-  const loadingCaption = '[Intergalatic music]';
-  const seitahCaption = '[Mysterious synth with steady beat]';
-  const deltaCaption = '[Peaceful but mysterious synth and violin]';
-  const maazCaption = '[Electronic synth tune]';
+  const loadingCaption = '[♪ Intergalatic floating-through-space music ♪]';
+  const seitahCaption = '[♪ Synth chords with steady electronic beat ♪]';
+  const deltaCaption = '[♪ Tranquil synth with classical violin ♪]';
+  const maazCaption = '[♪ Deep synth with slowly growing beat ♪]';
   const [currentCaption, setCurrentCaption] = useState('');
   const [caption, setCaption] = useState('')
   const [captionStatus, setCaptionStatus] = useState('Captions are off');

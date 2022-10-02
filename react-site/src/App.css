@@ -9,6 +9,10 @@
   background-color: aqua;
 }
 
+.buttons{
+  background-color: lightgreen;
+}
+
 .informative-text {
   /* font-size: 80px; */
   color: white;
@@ -38,7 +42,6 @@
   width: 50%;
   float: right;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  padding-top: 20%;
 }
 
 .Delta h1{
@@ -89,10 +92,12 @@
 
 .Perseverance{
   padding: 4%;
+  width: 50%;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .Perseverance p{
   text-align: center;
   font-size: 120%;
   line-height: 160%;
+  padding-top: 4%;
 }
